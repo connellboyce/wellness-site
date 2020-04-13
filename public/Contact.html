@@ -28,6 +28,8 @@
         <input type="text" id="Last"><br><br>
         <label>E-mail:</label>
         <input type="text" id="email"><br><br>
+        <label>Message:</label>
+        <input type="text" id="message"><br><br>
         <button onclick="sendInfo()">Submit!</button>
 
         <script>
@@ -37,7 +39,9 @@
                 var firstname = document.querySelector("#first").value
                 var lastname = document.querySelector("#last").value
                 var email = document.querySelector("#email").value
-                console.log(firstname + ", " + lastname + ", " + email);
+                var message = document.querySelector("#message").value
+
+                console.log(firstname + ", " + lastname + ", " + email + message);
             };
         </script>
 
