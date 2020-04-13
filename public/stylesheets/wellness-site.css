@@ -1,0 +1,146 @@
+/* Styling */
+
+body {
+    background-color: #9AB4B1;
+    padding: 0%;
+    margin: 0%;
+}
+h1 {
+    color: #F8F8F8;
+    text-align: left;
+    margin: 25px;
+    padding-left: 25px;
+    font-size: 380%;
+    font-family: Sacramento;
+}
+h2 {
+    color: #F8F8F8;
+    text-align: left;
+    font-size: 230%;
+}
+h3 {
+  color: #F8F8F8
+}
+p {
+    color: #F8F8F8;
+    text-align: center;
+    font-size: 200%;
+    margin-left: 19%;
+    margin-right: 19%;
+}
+.aboutme {
+    color: #F8F8F8;
+    text-align: left;
+    font-size: 200%;
+    margin-left: 20%;
+    margin-right: 2%;
+}
+.index {
+    color: #F8F8F8;
+    text-align: center;
+    font-size: 200%;
+}
+.title {
+    margin-top: 0%;
+}
+
+.headshot {
+    display: block;
+    width: 30%;
+    float: left;
+    margin-top: 0.75%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    overflow: none;
+    background-color: #DEDFE1;
+    float: left;
+    font-size: 150%;
+}
+li {
+      float: left;
+}
+li a {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: lightgrey;
+}
+.subtitle {
+    font-size: 300%;
+}
+
+#carousel{
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 450px;
+  font-size: 50px;
+  width: 700px;
+  height: 500px;
+}
+
+#about{
+  text-align: center;
+}
+
+#bio{
+  text-align:center;
+  font-size: 20px;
+}
+
+#info{
+  align:left;
+}
+
+#logo{
+  margin-bottom: -25px;
+  padding: 10px;
+  width: 140px;
+  height: 80px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #DEDFE1;
+  color: grey;
+  text-align: center;
+}
+
+.accordion {
+  background-color: #DEDFE1;
+  color: grey;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid white;
+  transition: 0.4s ease-out;
+}
+.content {
+  padding: 0 18px;
+  background-color: lightgray;
+  display: none;
+  overflow: hidden;
+}
+.accordionText {
+  text-align: left;
+  color: grey;
+  font-size: small;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
