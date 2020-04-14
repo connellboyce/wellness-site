@@ -2,7 +2,7 @@ var accordion = document.getElementsByClassName("accordion");
 var i;
 
 /**
- * 
+ *
  * @param {*} thisDiv divider to hide
  */
 function toggle(thisDiv){
