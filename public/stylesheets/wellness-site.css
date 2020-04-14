@@ -17,6 +17,7 @@ h2 {
     color: #F8F8F8;
     text-align: left;
     font-size: 230%;
+    text-align: center;
 }
 h3 {
   color: #F8F8F8
@@ -28,6 +29,7 @@ p {
     margin-left: 19%;
     margin-right: 19%;
 }
+
 .aboutme {
     color: #F8F8F8;
     text-align: left;
@@ -122,13 +124,14 @@ footer {
 .accordion {
   background-color: #DEDFE1;
   color: grey;
-  font-weight: 700;
+  font-weight: 4000;
   cursor: pointer;
-  padding: 18px;
+  padding: 20px;
   width: 100%;
   text-align: left;
   border: 1px solid white;
   transition: 0.4s ease-out;
+  align-self: center;
 }
 .content {
   padding: 0 18px;
@@ -143,4 +146,3 @@ footer {
   margin-left: 0%;
   margin-right: 0%;
 }
-
