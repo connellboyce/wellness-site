@@ -111,6 +111,14 @@ li a:hover {
   height: 80px;
 }
 
+#circlebullet{
+  list-style-type: circle;
+}
+
+#nobullet{
+  list-style: none;
+}
+
 footer {
   position: fixed;
   left: 0;
@@ -121,10 +129,12 @@ footer {
   text-align: center;
 }
 
+
 .accordion {
   background-color: #DEDFE1;
   color: black;
-  font-weight: 4000;
+  font-weight: bold;
+  font-size: 15px;
   cursor: pointer;
   padding: 20px;
   width: 100%;
@@ -142,7 +152,7 @@ footer {
 .accordionText {
   text-align: left;
   color: black;
-  font-size: small;
+  font-size: 16px;
   margin-left: 0%;
   margin-right: 0%;
 }
