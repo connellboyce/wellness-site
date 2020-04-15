@@ -1,8 +1,8 @@
 function sendInfo(){
-    var firstname = document.querySelector("#first").value
-    var lastname = document.querySelector("#last").value
-    var email = document.querySelector("#email").value
-    var message = document.querySelector("#message").value
+    var firstname = document.getElementById("first").value
+    var lastname = document.getElementById("last").value
+    var email = document.getElementById("email").value
+    var message = document.getElementById("message").value
 
-    console.log(firstname + ", " + lastname + ", " + email + message);
+    console.log(firstname + " " + lastname + ", " + email + ", " + message);
 };
