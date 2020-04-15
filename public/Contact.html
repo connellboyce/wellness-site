@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=Bellota|Caveat|Quicksand|Sacramento&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel = "stylesheet" type = "text/css" href = "stylesheets/wellness-site.css"/>
+        <script src="javascripts/contact.js"></script>
     </head>
     <body>
 <br>
@@ -21,31 +22,26 @@
             <li><a href="CalorieCal.html">Calorie Calculator</a></li>
             <li style="float: right"><a href="contact.html">Contact</a></li>
         </ul>
-
-      <div>
-        <label>First name:</label>
-        <input type="text" id="first"><br><br>
-        <label>Last name:</label>
-        <input type="text" id="Last"><br><br>
-        <label>E-mail:</label>
-        <input type="text" id="email"><br><br>
-        <label>Message:</label>
-        <input type="text" id="message"><br><br>
-        <button onclick="sendInfo()">Submit!</button>
-
-        <script>
-            
-
-            function sendInfo(){
-                var firstname = document.querySelector("#first").value
-                var lastname = document.querySelector("#last").value
-                var email = document.querySelector("#email").value
-                var message = document.querySelector("#message").value
-
-                console.log(firstname + ", " + lastname + ", " + email + message);
-            };
-        </script>
-
+<br>
+<br>
+        <h2>Contact Us!</h2>
+        <hr>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="first" class="formlabel">First name:</label>
+                <input class="form-control" type="text" id="first"><br><br>
+                <label for="Last" class="formlabel">Last name:</label>
+                <input class="form-control" type="text" id="Last"><br><br>
+                <label for="email" class="formlabel">E-mail:</label>
+                <input class="form-control" type="text" id="email"><br><br>
+                <label for="message" class="formlabel">Message:</label>
+                <input class="form-control" type="text" id="message"><br><br>
+                <button onclick="sendInfo()">Submit!</button>
+            </div>
+        </form>
+    </div>
+    <br>
 
 <footer>2020 © Wellness All Rights Reserved.</footer>
     </body>
