@@ -1,10 +1,10 @@
 function getInputValue() {
-    var inputVal = document.getElementById("calInput").value;
-    var calCount = document.getElementById("calRemain").value;
+    var inputVal = document.getElementById("calorieInput").value;
+    var calCount = document.getElementById("caloriesRemaining").value;
     if (!isNaN(inputVal)){
         var newVal = calCount - inputVal;
-        document.getElementById("calRemain").value = (newVal); 
+        document.getElementById("caloriesRemaining").value = (newVal); 
     } else {
-        document.getElementById("calRemain").value = "error";
+        document.getElementById("caloriesRemaining").value = "error";
     }
 }
