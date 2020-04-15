@@ -158,3 +158,11 @@ footer {
   margin-left: 0%;
   margin-right: 0%;
 }
+
+.container {
+  width: 300px;
+}
+
+.formlabel {
+  color: white;
+}
