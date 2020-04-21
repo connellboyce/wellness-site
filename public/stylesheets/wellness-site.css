@@ -66,6 +66,7 @@ ul {
 }
 li {
       float: left;
+      
 }
 li a {
     display: block;
@@ -79,9 +80,11 @@ li a:hover {
     text-decoration: none;
     color: grey;
 }
+
 .subtitle {
     font-size: 300%;
 }
+
 
 #carousel{
   background-color: white;
