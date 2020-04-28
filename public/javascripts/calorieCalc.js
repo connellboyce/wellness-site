@@ -43,7 +43,6 @@ function show(item) {
     var editCell = row.insertCell(3);
 
         var table = document.getElementById("addingTable");
-        var row = table.insertRow();
         row.setAttribute("id", currentNewIndex, 0);
 
         var btn = document.createElement('input');
@@ -91,13 +90,16 @@ function removeIndex() {
 
 }
 function addAll() {
-    var numberOfRows = document.getElementById("addingTable").rows.length;
+    let rows = document.getElementById("addingTable").querySelectorAll('tr');
+    let tds = Array.from(rows, row => row.cells[1]);
     var total = 0;
-    //for (var i=1; i<=numberOfRows; i++) {
-        total = total + document.getElementById("addingTable").rows[-1].cells[1];
-        removeIndex();
-    //}
-    document.getElementById("caloriesRemaining").value = document.getElementById("caloriesRemaining").value - total;
+    console.log(tds);
+    for (var i=1; i<tds.length; i++) {
+        if (!isNaN(tds[i].innerHTML)) {
+            total = total + parseInt(tds[i].innerHTML, 10);
+        }
+    }
+    document.getElementById("caloriesRemaining").value = parseInt(document.getElementById("caloriesRemaining").value, 10) - total;
 }
 function edit(row) {
     row.remove();
