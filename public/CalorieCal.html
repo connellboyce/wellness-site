@@ -6,9 +6,11 @@
         <link href="https://fonts.googleapis.com/css?family=Bellota|Caveat|Quicksand|Sacramento&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel = "stylesheet" type = "text/css" href = "stylesheets/wellness-site.css"/>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
         <script src="javascripts/calorieCalc.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="javascripts/apiCommunication.js"></script>
     </head>
     <body>
 <br>
@@ -34,19 +36,42 @@
           <p id="bio"> Our "Calorie Calculator" can help estimate the number of calories you have remaining from the calories you enter. <b>Give it a try!</b></p>
           <br>
         <div class="container">
+          <button type="button" id="get" class="btn" onclick="load();">Use Our Measurements</button>
+
+
+<select id="sel" onchange="show(this);">
+  <option value="">-- Select --</option>
+</select>
+<br>
+<br>
+<table id="addingTable">
+  <tr>
+    <th>Food</th>
+    <th>Calories</th>
+    <th></th>
+  </tr>
+</table> 
+<br>
+
+<br>
         <form>
             <div class="form-group">
-              <label class="formlabel" for="calorieInput">Enter Your Calorie Count:</label>
+              <label class="formlabel" for="calorieInput">Enter Custom Calorie Value:</label>
               <input type="text" class="form-control" id="calorieInput">
             </div>
+            <button type="button" class="btn" onclick="getInputValue();">Add Custom</button>
+            <br>
+            <br>
             <div class="form-group">
               <label class="formlabel" for="caloriesRemaining">Remaining Calories:</label>
               <input type="text" class="form-control" id="caloriesRemaining" value="2000" readonly>
             </div>
-            <button type="button" class="btn" onclick="getInputValue();">Process</button>
+            <button type="button" class="btn" onclick="addAll();">Calculate Remaining</button>
           </form>
           </div>
 <hr>
+
+
 
 <footer>2020 © Wellness All Rights Reserved.</footer>
     </body>

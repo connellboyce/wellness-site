@@ -178,3 +178,9 @@ footer {
 .formlabel {
   color: white;
 }
+
+table {
+  border: 1px solid black;
+  padding: 15px;
+  width: 300px;
+}
