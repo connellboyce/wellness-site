@@ -1,60 +1,66 @@
 <DOCTYPE! html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Wellness Calorie Calculator-</title>
-        <link href="https://fonts.googleapis.com/css?family=Bellota|Caveat|Quicksand|Sacramento&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel = "stylesheet" type = "text/css" href = "stylesheets/wellness-site.css"/>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-        <script src="javascripts/calorieCalc.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="javascripts/apiCommunication.js"></script>
-    </head>
-    <body>
-<br>
-      <div class="title">
-          <h1>Wellness<img id="logo" src="images/logo.png"></h1>
-      </div>
+  <html>
 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Diet.html">Diet</a></li>
-            <li><a href="Skincare.html">Skin Care</a></li>
-            <li><a href="Fitness.html">Fitness</a></li>
-            <li><a href="CalorieCal.html">Calorie Calculator</a></li>
-            <li style="float: right"><a href="contact.html">Contact</a></li>
-        </ul>
-<br>
-<br>
-<br>
-        <h2>Calorie Calculator</h2>
-<hr>
-        <center><img width="500px" src="images/calories.jpg"><center>
-          <br>
-          <p id="bio"> Our "Calorie Calculator" can help estimate the number of calories you have remaining from the calories you enter. <b>Give it a try!</b></p>
-          <br>
+  <head>
+    <meta charset="utf-8">
+    <title>Wellness Calorie Calculator-</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota|Caveat|Quicksand|Sacramento&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/wellness-site.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="javascripts/calorieCalc.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="javascripts/apiCommunication.js"></script>
+  </head>
+
+  <body>
+    <br>
+    <div class="title">
+      <h1>Wellness<img id="logo" src="images/logo.png"></h1>
+    </div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Diet.html">Diet</a></li>
+      <li><a href="Skincare.html">Skin Care</a></li>
+      <li><a href="Fitness.html">Fitness</a></li>
+      <li><a href="CalorieCal.html">Calorie Calculator</a></li>
+      <li style="float: right"><a href="contact.html">Contact</a></li>
+    </ul>
+    <br>
+    <br>
+    <br>
+    <h2>Calorie Calculator</h2>
+    <hr>
+    <center><img width="500px" src="images/calories.jpg">
+      <center>
+        <br>
+        <p id="bio"> Our "Calorie Calculator" can help estimate the number of calories you have remaining from the
+          calories you enter. <b>Give it a try!</b></p>
+        <br>
         <div class="container">
           <button type="button" id="get" class="btn" onclick="load();">Use Our Measurements</button>
 
 
-<select id="sel" onchange="show(this);">
-  <option value="">-- Select --</option>
-</select>
-<br>
-<br>
-<table id="addingTable">
-  <tr>
-    <th>Food</th>
-    <th>Calories</th>
-    <th></th>
-  </tr>
-</table> 
-<br>
+          <select id="sel" onchange="show(this);">
+            <option value="">-- Select --</option>
+          </select>
+          <br>
+          <br>
+          <table id="addingTable">
+            <tr>
+              <th>Food</th>
+              <th>Calories</th>
+              <th></th>
+            </tr>
+          </table>
+          <br>
 
-<br>
-        <form>
+          <br>
+          <form>
             <div class="form-group">
               <label class="formlabel" for="calorieInput">Enter Custom Calorie Value:</label>
               <input type="text" class="form-control" id="calorieInput">
@@ -68,11 +74,12 @@
             </div>
             <button type="button" class="btn" onclick="addAll();">Calculate Remaining</button>
           </form>
-          </div>
-<hr>
+        </div>
+        <hr>
 
 
 
-<footer>2020 © Wellness All Rights Reserved.</footer>
-    </body>
-</html>
+        <footer>2020 © Wellness All Rights Reserved.</footer>
+  </body>
+
+  </html>

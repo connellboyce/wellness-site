@@ -7,7 +7,19 @@ function getInputValue() {
     var name = row.insertCell(0);
     var calories = row.insertCell(1);
     var button = row.insertCell(2);
+    var editCell = row.insertCell(3);
 
+    var table = document.getElementById("addingTable");
+    row.setAttribute("id", currentNewIndex, 0);
+
+    var btn = document.createElement('input');
+    btn.type = "button";
+    btn.addEventListener('click', function () {
+        this.parentElement.parentElement.remove();
+    });
+    btn.className = "btn";
+    btn.value = "Delete";
+    button.appendChild(btn);
     name.innerHTML = "Custom Input";
     calories.innerHTML = document.getElementById("calorieInput").value;
 
@@ -15,11 +27,10 @@ function getInputValue() {
 
     document.getElementById("calorieInput").value = "";
 }
-function httpGet()
-{
+function httpGet() {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "http://localhost:3000/notes" , false );
-    xmlHttp.send( null );
+    xmlHttp.open("GET", "http://localhost:3000/notes", false);
+    xmlHttp.send(null);
     document.getElementById("get").disabled = true;
 
     return JSON.parse(xmlHttp.responseText);
@@ -42,37 +53,49 @@ function show(item) {
     var button = row.insertCell(2);
     var editCell = row.insertCell(3);
 
+    var table = document.getElementById("addingTable");
+    row.setAttribute("id", currentNewIndex, 0);
+
+    var btn = document.createElement('input');
+    btn.type = "button";
+    btn.addEventListener('click', function () {
+        this.parentElement.parentElement.remove();
+    });
+    btn.className = "btn";
+    btn.value = "Delete";
+    button.appendChild(btn);
+    currentNewIndex++;
+
+    var edit = document.createElement('input');
+    edit.type = "button";
+    edit.addEventListener('click', function () {
+        this.parentElement.parentElement.remove();
+        var response = prompt("Enter the new caloric value:");
+        var table = document.getElementById("addingTable");
+
+        var row = table.insertRow();
+        var name = row.insertCell(0);
+        var calories = row.insertCell(1);
+        var button = row.insertCell(2);
+        var editCell = row.insertCell(3);
+
         var table = document.getElementById("addingTable");
         row.setAttribute("id", currentNewIndex, 0);
 
         var btn = document.createElement('input');
         btn.type = "button";
-        btn.addEventListener('click', function(){
+        btn.addEventListener('click', function () {
             this.parentElement.parentElement.remove();
         });
         btn.className = "btn";
         btn.value = "Delete";
         button.appendChild(btn);
-        currentNewIndex++;
-
-        var edit = document.createElement('input');
-        edit.type = "button";
-        edit.addEventListener('click', function() {
-            this.parentElement.parentElement.remove();
-            var response = prompt("Enter the new caloric value:");
-            var table = document.getElementById("addingTable");
-
-            var row = table.insertRow();
-            var name = row.insertCell(0);
-            var calories = row.insertCell(1);
-            var button = row.insertCell(2);
-
-            name.innerHTML = "Edited Input";
-            calories.innerHTML = response;
-            });
-        edit.className = "btn";
-        edit.value = "Edit";
-        editCell.appendChild(edit);
+        name.innerHTML = "Edited Input";
+        calories.innerHTML = response;
+    });
+    edit.className = "btn";
+    edit.value = "Edit";
+    editCell.appendChild(edit);
 
 
 
@@ -83,7 +106,7 @@ function show(item) {
     currentNewIndex++;
 }
 function removeIndex() {
-    if (currentNewIndex != 1){
+    if (currentNewIndex != 1) {
         document.getElementById("addingTable").deleteRow(-1);
         currentNewIndex--;
     }
@@ -94,7 +117,7 @@ function addAll() {
     let tds = Array.from(rows, row => row.cells[1]);
     var total = 0;
     console.log(tds);
-    for (var i=1; i<tds.length; i++) {
+    for (var i = 1; i < tds.length; i++) {
         if (!isNaN(tds[i].innerHTML)) {
             total = total + parseInt(tds[i].innerHTML, 10);
         }
@@ -103,13 +126,45 @@ function addAll() {
 }
 function edit(row) {
     row.remove();
-    var response = prompt("Enter the new caloric value:");
     var table = document.getElementById("addingTable");
 
-    var row = table.insertRow(currentNewIndex);
+    var row = table.insertRow();
     var name = row.insertCell(0);
     var calories = row.insertCell(1);
     var button = row.insertCell(2);
+    var editCell = row.insertCell(3);
+
+    var table = document.getElementById("addingTable");
+    row.setAttribute("id", currentNewIndex, 0);
+
+    var btn = document.createElement('input');
+    btn.type = "button";
+    btn.addEventListener('click', function () {
+        this.parentElement.parentElement.remove();
+    });
+    btn.className = "btn";
+    btn.value = "Delete";
+    button.appendChild(btn);
+    currentNewIndex++;
+
+    var edit = document.createElement('input');
+    edit.type = "button";
+    edit.addEventListener('click', function () {
+        this.parentElement.parentElement.remove();
+        var response = prompt("Enter the new caloric value:");
+        var table = document.getElementById("addingTable");
+
+        var row = table.insertRow();
+        var name = row.insertCell(0);
+        var calories = row.insertCell(1);
+        var button = row.insertCell(2);
+
+        name.innerHTML = "Edited Input";
+        calories.innerHTML = response;
+    });
+    edit.className = "btn";
+    edit.value = "Edit";
+    editCell.appendChild(edit);
 
     name.innerHTML = "Edited Input";
     calories.innerHTML = response;
